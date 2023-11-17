@@ -107,5 +107,22 @@ body {
         </div>
     </div>
     <script src="https://kit.fontawesome.com/3f22af6024.js" crossorigin="anonymous"></script>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                console.log(entry);
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('Show');
+                }
+                else {
+                    entry.target.classList.remove('Show');
+                }
+            });
+        });
+
+        const hiddenElements = document.querySelectorAll(".text-box");
+        hiddenElements.forEach((el) => observer.observe(el));
+    </script>
 </body>
 </html>

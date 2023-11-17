@@ -73,6 +73,19 @@
         #content-btn:hover {
             background-color: blue;
         }
+
+        .text-box {
+            opacity: 0;
+            transition: all 2s;
+            filter: blur(5px);
+            transform: translateX(-100%);
+        }
+
+        .Show {
+            opacity: 1;
+            filter: blur(0);
+            transform: translateX(0);
+        }
     </style>
 </head>
 
@@ -240,6 +253,22 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                console.log(entry);
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('Show');
+                } else {
+                    entry.target.classList.remove('Show');
+                }
+            });
+        });
+
+        const hiddenElements = document.querySelectorAll(".text-box");
+        hiddenElements.forEach((el) => observer.observe(el));
+    </script>
 </body>
 
 </html>
