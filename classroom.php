@@ -105,17 +105,17 @@ body {
 
             <div class="classrooms">
                 <i class="fa-solid fa-building-columns"></i>
-                <a href=""><h2>Lab-1</h2></a>
+                <a href=""><h2>Lab-2</h2></a>
             </div>
 
             <div class="classrooms">
                 <i class="fa-solid fa-building-columns"></i>
-                <a href=""><h2>Lab-1</h2></a>
+                <a href=""><h2>Lab-3</h2></a>
             </div>
 
             <div class="classrooms">
                 <i class="fa-solid fa-building-columns"></i>
-                <a href=""><h2>Lab-1</h2></a>
+                <a href=""><h2>Lab-4</h2></a>
             </div>
         </div>
     </div>
