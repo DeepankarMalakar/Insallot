@@ -134,7 +134,7 @@ body {
             });
         });
 
-        const hiddenElements = document.querySelectorAll(".text-box");
+        const hiddenElements = document.querySelectorAll(".classrooms");
         hiddenElements.forEach((el) => observer.observe(el));
     </script>
 </body>
