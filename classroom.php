@@ -79,6 +79,19 @@ body {
     transform: scale(1.05);
 }
 
+.classrooms {
+    opacity: 0;
+    transition: all 1s;
+    filter: blur(5px);
+    transform: translateX(-100%);
+}
+
+.Show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
     </style>
 </head>
 <body>
