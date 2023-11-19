@@ -34,6 +34,10 @@ body {
     position: relative;
 }
 
+.additional-paragraphs {
+    display: none;
+}
+
 .container {
     display: flex;
     align-items: center;
@@ -146,6 +150,25 @@ img {
     }
 }
     </style>
+        <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const moreParagraphs = document.querySelector('.additional-paragraphs');
+            const learnMoreButton = document.querySelector('.about-btn');
+
+            let isExpanded = false;
+
+            learnMoreButton.addEventListener('click', function() {
+                isExpanded = !isExpanded;
+                if (isExpanded) {
+                    moreParagraphs.style.display = 'block';
+                    learnMoreButton.textContent = 'Show Less';
+                } else {
+                    moreParagraphs.style.display = 'none';
+                    learnMoreButton.textContent = 'Learn More';
+                }
+            });
+        });
+    </script>
 </head>
 <body>
     <section class="about">
@@ -155,6 +178,8 @@ img {
         <div class="container">
             <div class="about-section">
                 <p>"Welcome to Insallot, where convenience meets organization. We understand the challenges that come with managing classrooms and booking resources effectively. Our platform is designed to simplify this process, offering a seamless solution for educators, administrators, and students alike..</p>
+                <p class="additional-paragraphs">At Insallot, our mission is to streamline the classroom management experience. With our user-friendly interface, you can effortlessly schedule classes, manage resources, and track bookings with just a few clicks. Whether you're a teacher planning lessons, an administrator overseeing multiple classrooms, or a student booking study rooms, our system caters to your needs.</p>
+                <p class="additional-paragraphs">Join us on [Your Website Name] and experience a new era of streamlined classroom management. Simplify your scheduling, optimize your resources, and elevate your educational experience with our comprehensive platform.</p>
                 <button class="about-btn">Learn More</button>
             </div>
             <div class="about-image">
